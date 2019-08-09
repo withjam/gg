@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>Global Giving API - Matt Pileggi</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?subset=latin&amp;family=Open+Sans:400,400italic,700,700italic,800" media="all">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?subset=latin&amp;family=Aleo:300,400,700" media="all">
+    <link rel="icon" type="image/png" href="https://www.globalgiving.org/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+ </head>
+  <body>
+    <header>
+      <img src="logo_300.png" width="200" alt="Global Giving Logo" id="logo">
+      <form name="search_form" onSubmit="GG.doSearch(); return false;">
+        <label for="search_q">Search Projects</label>
+        <input name="q" placeholder="Search by keyword" id="search_q">
+        <button class="search-btn" aria-label="execute search"><i class="fas fa-search"></i></button>
+      </form>
+      <section class="filters" role="toolbar">
+        <article class="filter" tabindex="0">
+          <header>
+            <h1>Theme</h1>
+            <i class="fas fa-caret-down"></i>
+          </header>
+          <ul role="listbox" id="theme_filters"></ul>
+        </article>
+      </section>
+    </header>
+    <main>
+      <header>
+        <h1>Project Explorer</h1>
+        <button class="action reset" onclick="GG.clearSearch()"><i class="far fa-times-circle"></i> clear filters</button>
+        <section class="view-options" aria-label="View Options">
+          <button class="toggle toggle-exclusive active" value="grid" onClick="GG.changeView(this)"><i class="fas fa-th"></i> Grid</button>
+          <button class="toggle toggle-exclusive" value="list" onClick="GG.changeView(this)"><i class="fas fa-list"></i> List</button>
+          <button class="toggle toggle-exclusive" value="map" onClick="GG.changeView(this)"><i class="fas fa-map-marker-alt"></i> Map</button>
+        </section>
+      </header>
+
+      <section class="result-list" data-view="grid">
+        <div class="loading">Loading Projects</div>
+      </section>
+    
+    </main>
+    <footer>
+      
+    </footer>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
