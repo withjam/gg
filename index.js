@@ -1,5 +1,5 @@
-import { search, fetch_themes } from './modules/search';
-import { result_item, result_list, theme_list } from './modules/templates';
+import { search, fetch_themes } from './modules/search.js';
+import { result_item, result_list, theme_list } from './modules/templates.js';
 
 // start off with a blank search
 const updateSearch = () => {
