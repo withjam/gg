@@ -192,6 +192,8 @@ body > footer {
   background-color: #3e4b59;
   padding: 1.4rem;
   flex-basis: 1;
+  color: #c4c7ca;
+  font-size: 0.6rem;
 }
 
 .result-item {
