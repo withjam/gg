@@ -178,7 +178,7 @@ main > header {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
 }
 
 body > header h1 {
@@ -252,6 +252,32 @@ body > footer {
   font-weight: 300;
 }
 
+.goal strong {
+  color: #b2bb1e;
+  font-size: 1.25em;
+}
+
+.goal label {
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.progress {
+  position: relative;
+  width: 95%;
+  overflow: hidden;
+  background-color: #e7e5e1;
+  padding: 0.5rem;
+}
+
+.progress .amount {
+  background-color: #b2bb1e;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
 .search-results {
   margin-bottom: 2rem;
 }
@@ -292,7 +318,7 @@ body > footer {
   margin-right: -1em;
   padding-right: 1em;
   font-size: 0.65rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .search-results[data-view="grid"] .summary:before {
@@ -328,7 +354,7 @@ body > footer {
 
 .search-results[data-view="grid"] .label.theme {
   position: absolute;
-  bottom: 1em;
+  bottom: 3em;
   left: 0;
   right: 0;
   font-style: italic;
@@ -343,6 +369,23 @@ body > footer {
 .search-results[data-view="grid"] .thumbnail img {
   max-height: 15.3rem;
   min-height: 10rem;
+}
+
+.search-results[data-view="grid"] .goal {
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+  left: 0;
+}
+
+.search-results[data-view="grid"] .goal label {
+  display: none;
+  position: relative;
+  top: 4em;
+  text-align: center;
+}
+.search-results[data-view="grid"] .goal:hover label {
+  display: block;
 }
 
 .result-map {

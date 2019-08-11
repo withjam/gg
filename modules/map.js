@@ -83,6 +83,7 @@ export const load_map = () => {
 
 export const clear_markers = () => {
   marker_source.clear();
+  overlay.setPosition(undefined);
 }
 
 export const add_markers = (projects) => {

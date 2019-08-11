@@ -10,6 +10,7 @@ const updateSearch = () => {
   }
   clear_markers();
   search(q, options).then(results => {
+    document.getElementById('search_total').innerHTML = results.numberFound + ' result' + (results.numberFound === 1 ? '' : 's');
     result_list.fill(results.projects.map(result => result_item.fill(result)));
     add_markers(results.projects);
   });
