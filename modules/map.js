@@ -101,7 +101,7 @@ export const add_markers = (projects) => {
       map.getView().fit(marker_source.getExtent(), map.getSize());
     } else {
       const address = project.organization.city + ', ' + project.organization.state + ', ' + project.organization.country
-      fetch('http://nominatim.openstreetmap.org/search?q=' + address + '&format=json&polygon=0&addressdetails=1', {
+      fetch('https://nominatim.openstreetmap.org/search?q=' + address + '&format=json&polygon=0&addressdetails=1', {
         method: 'POST'
       }).then(response => {
         if (!response.ok) {
